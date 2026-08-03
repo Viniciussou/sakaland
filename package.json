@@ -1,0 +1,55 @@
+{
+  "name": "sakaland",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema gamificado para o evento corporativo Sakaland - gerencie Sakalekas, metas, ranking e loja de brindes.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "tsx scripts/seed.ts"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "mongoose": "8.6.3",
+    "bcryptjs": "2.4.3",
+    "jsonwebtoken": "9.0.2",
+    "jose": "5.9.3",
+    "zod": "3.23.8",
+    "nodemailer": "6.9.15",
+    "recharts": "2.12.7",
+    "lucide-react": "0.446.0",
+    "clsx": "2.1.1",
+    "tailwind-merge": "2.5.2",
+    "sonner": "1.5.0",
+    "next-themes": "0.3.0",
+    "exceljs": "4.4.0",
+    "pdfkit": "0.15.0",
+    "iconv-lite": "0.6.3",
+    "date-fns": "3.6.0",
+    "framer-motion": "11.5.4"
+  },
+  "devDependencies": {
+    "typescript": "5.6.2",
+    "@types/node": "20.16.5",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0",
+    "@types/bcryptjs": "2.4.6",
+    "@types/jsonwebtoken": "9.0.7",
+    "@types/pdfkit": "0.13.4",
+    "@types/nodemailer": "6.4.16",
+    "tailwindcss": "3.4.10",
+    "postcss": "8.4.45",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.35",
+    "tsx": "4.19.1",
+    "dotenv": "16.4.5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
