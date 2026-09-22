@@ -24,8 +24,12 @@ export const resetPasswordSchema = z.object({
 export const updateProfileSchema = z.object({
   name: z.string().min(2).optional(),
   department: z.string().optional(),
-  avatarUrl: z.string().url().optional().or(z.literal("")),
 });
+
+// Upload de foto de perfil: a imagem é convertida para base64 e salva
+// diretamente no documento do usuário no MongoDB (campo avatarUrl).
+export const AVATAR_MAX_SIZE_BYTES = 2 * 1024 * 1024; // 2MB
+export const AVATAR_ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
 
 export const changePasswordSchema = z.object({
   currentPassword: z.string().min(1),

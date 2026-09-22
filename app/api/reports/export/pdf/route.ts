@@ -31,7 +31,7 @@ export async function GET() {
   });
 
   // Cabeçalho
-  doc.fillColor("#C8102E").fontSize(24).text("Sakaland", { continued: false });
+  doc.fillColor("#0E8A3E").fontSize(24).text("Sakaland", { continued: false });
   doc.fillColor("#000000").fontSize(12).text("Relatório do evento corporativo Sakamoto");
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor("#666666").text(`Gerado em ${new Date().toLocaleString("pt-BR")}`);

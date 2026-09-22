@@ -52,7 +52,7 @@ export function RewardCard({
         )}
         {soldOut && (
           <div className="absolute inset-0 bg-sakaland-black/70 flex items-center justify-center">
-            <span className="animate-stamp inline-flex flex-col items-center justify-center w-24 h-24 rounded-full border-[3px] border-double border-sakaland-red text-sakaland-red rotate-[-10deg]">
+            <span className="animate-stamp inline-flex flex-col items-center justify-center w-24 h-24 rounded-full border-[3px] border-double border-red-500 text-red-400 rotate-[-10deg]">
               <span className="font-display text-[13px] tracking-[0.15em] leading-none">ESGOTADO</span>
             </span>
           </div>
@@ -69,7 +69,7 @@ export function RewardCard({
         </p>
 
         <div className="flex items-center justify-between mt-4">
-          <div className="flex items-center gap-1.5 text-sakaland-gold font-medium font-numeric">
+          <div className="flex items-center gap-1.5 text-sakaland-accent font-medium font-numeric">
             <Coins className="w-4 h-4" />
             {formatSakalekas(reward.price)}
           </div>

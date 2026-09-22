@@ -45,7 +45,7 @@ export default function ForgotPasswordPage() {
 
       <p className="mt-8 text-sm text-sakaland-muted text-center">
         Lembrou a senha?{" "}
-        <Link href="/login" className="text-sakaland-red hover:underline">
+        <Link href="/login" className="text-sakaland-primary hover:underline">
           Voltar ao login
         </Link>
       </p>

@@ -6,24 +6,24 @@ export function StatCard({
   label,
   value,
   icon: Icon,
-  accent = "red",
+  accent = "primary",
   hint,
 }: {
   label: string;
   value: string | number;
   icon: LucideIcon;
-  accent?: "red" | "gold" | "white";
+  accent?: "primary" | "accent" | "white";
   hint?: string;
 }) {
   const accentColor = {
-    red: "text-sakaland-red bg-sakaland-red/10 border-sakaland-red/20",
-    gold: "text-sakaland-gold bg-sakaland-gold/10 border-sakaland-gold/20",
+    primary: "text-sakaland-primary bg-sakaland-primary/10 border-sakaland-primary/20",
+    accent: "text-sakaland-accent bg-sakaland-accent/10 border-sakaland-accent/20",
     white: "text-sakaland-white bg-white/10 border-white/15",
   }[accent];
 
   const barColor = {
-    red: "bg-sakaland-red",
-    gold: "bg-sakaland-gold",
+    primary: "bg-sakaland-primary",
+    accent: "bg-sakaland-accent",
     white: "bg-sakaland-white/60",
   }[accent];
 

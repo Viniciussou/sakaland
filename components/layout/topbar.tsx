@@ -2,7 +2,6 @@
 
 import { useRouter } from "next/navigation";
 import { LogOut, Coins } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
 import { Button } from "@/components/ui/button";
 import { logoutAction } from "@/actions/auth.actions";
 import { formatSakalekas } from "@/lib/utils";
@@ -28,9 +27,9 @@ export function Topbar({
 
       <div className="flex items-center gap-3">
         {role === "participant" && typeof balance === "number" && (
-          <div className="flex items-center gap-2 bg-gradient-to-b from-sakaland-surface2 to-sakaland-surface border border-sakaland-gold/40 rounded-full pl-1.5 pr-3.5 py-1.5 shadow-[0_1px_0_0_rgba(241,231,211,0.05)_inset]">
-            <span className="w-6 h-6 rounded-full bg-sakaland-gold/15 border border-sakaland-gold/40 flex items-center justify-center">
-              <Coins className="w-3.5 h-3.5 text-sakaland-gold" />
+          <div className="flex items-center gap-2 bg-gradient-to-b from-sakaland-surface2 to-sakaland-surface border border-sakaland-accent/40 rounded-full pl-1.5 pr-3.5 py-1.5 shadow-[0_1px_0_0_rgba(240,244,242,0.05)_inset]">
+            <span className="w-6 h-6 rounded-full bg-sakaland-accent/15 border border-sakaland-accent/40 flex items-center justify-center">
+              <Coins className="w-3.5 h-3.5 text-sakaland-accent" />
             </span>
             <span className="font-numeric text-sm font-medium text-sakaland-white">
               {formatSakalekas(balance)}
@@ -40,8 +39,6 @@ export function Topbar({
             </span>
           </div>
         )}
-
-        <ThemeToggle />
 
         <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-white/10">
           <div className="w-8 h-8 rounded-full bg-sakaland-surface2 flex items-center justify-center text-xs font-semibold">

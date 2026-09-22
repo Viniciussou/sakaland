@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Shippori_Mincho, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Toaster } from "sonner";
-import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const displayFont = Shippori_Mincho({
+const displayFont = Archivo({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700"],
+  weight: ["600", "700", "800"],
 });
 
 const bodyFont = IBM_Plex_Sans({
@@ -23,37 +22,32 @@ const monoFont = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sakaland | Evento Corporativo Sakamoto",
+  title: "Sakamoto | Evento Corporativo",
   description:
-    "Sistema gamificado do evento Sakaland — cumpra metas, acumule Sakalekas e troque por brindes exclusivos.",
+    "Sistema gamificado do evento — cumpra metas, acumule Sakalekas e troque por brindes exclusivos.",
 };
 
+// Sistema opera apenas em modo noturno — sem alternância de tema.
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" className="dark">
       <body className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-        >
-          {children}
-          <Toaster
-            theme="dark"
-            position="top-right"
-            toastOptions={{
-              style: {
-                background: "#151518",
-                border: "1px solid rgba(255,255,255,0.08)",
-                color: "#F5F5F0",
-              },
-            }}
-          />
-        </ThemeProvider>
+        {children}
+        <Toaster
+          theme="dark"
+          position="top-right"
+          toastOptions={{
+            style: {
+              background: "#0E1815",
+              border: "1px solid rgba(240,244,242,0.08)",
+              color: "#F0F4F2",
+            },
+          }}
+        />
       </body>
     </html>
   );

@@ -16,8 +16,8 @@ export default async function RankingPage() {
         title="Ranking Sakaland"
         description="Os participantes com mais Sakalekas acumuladas no evento."
         actions={
-          <span className="w-11 h-11 rounded-full bg-sakaland-gold/10 border border-sakaland-gold/30 flex items-center justify-center">
-            <Trophy className="w-5 h-5 text-sakaland-gold" />
+          <span className="w-11 h-11 rounded-full bg-sakaland-accent/10 border border-sakaland-accent/30 flex items-center justify-center">
+            <Trophy className="w-5 h-5 text-sakaland-accent" />
           </span>
         }
       />
@@ -31,7 +31,7 @@ export default async function RankingPage() {
                 key={p.id}
                 className={cn(
                   "flex items-center gap-4 px-5 py-4 transition-colors",
-                  isMe && "bg-sakaland-red/10"
+                  isMe && "bg-sakaland-primary/10"
                 )}
               >
                 <MedalBadge position={p.position} />
@@ -39,14 +39,14 @@ export default async function RankingPage() {
                   {p.name.charAt(0).toUpperCase()}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className={cn("truncate", isMe && "font-semibold text-sakaland-red")}>
+                  <p className={cn("truncate", isMe && "font-semibold text-sakaland-primary")}>
                     {p.name} {isMe && "(você)"}
                   </p>
                   {p.department && (
                     <p className="text-xs text-sakaland-muted truncate">{p.department}</p>
                   )}
                 </div>
-                <div className="flex items-center gap-1.5 font-numeric text-lg text-sakaland-gold shrink-0">
+                <div className="flex items-center gap-1.5 font-numeric text-lg text-sakaland-accent shrink-0">
                   {formatSakalekas(p.balance)}
                 </div>
               </div>
@@ -56,7 +56,7 @@ export default async function RankingPage() {
       </Card>
 
       {me && !meInTop10 && (
-        <Card className="border-sakaland-red/40">
+        <Card className="border-sakaland-primary/40">
           <p className="text-xs uppercase tracking-wider text-sakaland-muted mb-3">
             Sua posição
           </p>
@@ -66,9 +66,9 @@ export default async function RankingPage() {
               {me.name.charAt(0).toUpperCase()}
             </div>
             <div className="flex-1">
-              <p className="font-semibold text-sakaland-red">{me.name} (você)</p>
+              <p className="font-semibold text-sakaland-primary">{me.name} (você)</p>
             </div>
-            <div className="font-numeric text-lg text-sakaland-gold">
+            <div className="font-numeric text-lg text-sakaland-accent">
               {formatSakalekas(me.balance)}
             </div>
           </div>

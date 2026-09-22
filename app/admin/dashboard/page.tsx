@@ -43,13 +43,13 @@ export default async function AdminDashboardPage() {
           label="Sakalekas distribuídas"
           value={formatSakalekas(stats.totalSakalekasDistributed)}
           icon={Coins}
-          accent="gold"
+          accent="accent"
         />
         <StatCard
           label="Brindes entregues"
           value={stats.totalRewardsDelivered}
           icon={Gift}
-          accent="red"
+          accent="primary"
         />
         <StatCard
           label="Metas concluídas"
@@ -72,7 +72,7 @@ export default async function AdminDashboardPage() {
               <div key={p.position} className="flex items-center gap-3">
                 <MedalBadge position={p.position} />
                 <span className="flex-1 text-sm truncate">{p.name}</span>
-                <span className="text-sakaland-gold text-sm font-numeric">
+                <span className="text-sakaland-accent text-sm font-numeric">
                   {formatSakalekas(p.balance)}
                 </span>
               </div>
@@ -86,7 +86,7 @@ export default async function AdminDashboardPage() {
 
       <Card>
         <h2 className="font-display text-lg mb-4 flex items-center gap-2">
-          <Activity className="w-4 h-4 text-sakaland-red" /> Atividade recente
+          <Activity className="w-4 h-4 text-sakaland-primary" /> Atividade recente
         </h2>
         <div className="space-y-3">
           {stats.recentLogs.map((log) => (

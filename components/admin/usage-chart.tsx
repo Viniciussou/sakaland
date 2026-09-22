@@ -22,32 +22,32 @@ export function UsageChart({ data }: { data: DataPoint[] }) {
       <AreaChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
         <defs>
           <linearGradient id="creditGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#B6893F" stopOpacity={0.45} />
-            <stop offset="100%" stopColor="#B6893F" stopOpacity={0} />
+            <stop offset="0%" stopColor="#0E8A3E" stopOpacity={0.45} />
+            <stop offset="100%" stopColor="#0E8A3E" stopOpacity={0} />
           </linearGradient>
           <linearGradient id="debitGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#3C5670" stopOpacity={0.45} />
-            <stop offset="100%" stopColor="#3C5670" stopOpacity={0} />
+            <stop offset="0%" stopColor="#2F80ED" stopOpacity={0.45} />
+            <stop offset="100%" stopColor="#2F80ED" stopOpacity={0} />
           </linearGradient>
         </defs>
-        <CartesianGrid strokeDasharray="3 3" stroke="rgba(241,231,211,0.06)" vertical={false} />
-        <XAxis dataKey="label" stroke="#A0937C" fontSize={12} tickLine={false} axisLine={false} />
-        <YAxis stroke="#A0937C" fontSize={12} tickLine={false} axisLine={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke="rgba(240,244,242,0.06)" vertical={false} />
+        <XAxis dataKey="label" stroke="#7E938A" fontSize={12} tickLine={false} axisLine={false} />
+        <YAxis stroke="#7E938A" fontSize={12} tickLine={false} axisLine={false} />
         <Tooltip
           contentStyle={{
-            background: "#211810",
-            border: "1px solid rgba(241,231,211,0.1)",
+            background: "#0E1815",
+            border: "1px solid rgba(240,244,242,0.1)",
             borderRadius: 8,
             fontSize: 12,
             fontFamily: "var(--font-body)",
           }}
-          labelStyle={{ color: "#F1E7D3" }}
+          labelStyle={{ color: "#F0F4F2" }}
         />
         <Area
           type="monotone"
           dataKey="credits"
           name="Sakalekas concedidas"
-          stroke="#B6893F"
+          stroke="#0E8A3E"
           fill="url(#creditGradient)"
           strokeWidth={2}
         />
@@ -55,7 +55,7 @@ export function UsageChart({ data }: { data: DataPoint[] }) {
           type="monotone"
           dataKey="debits"
           name="Sakalekas gastas"
-          stroke="#3C5670"
+          stroke="#2F80ED"
           fill="url(#debitGradient)"
           strokeWidth={2}
         />

@@ -93,7 +93,7 @@ export function GoalsManager({
                 <span>
                   {formatDate(g.startDate)} — {formatDate(g.endDate)}
                 </span>
-                <span className="text-sakaland-gold font-numeric">
+                <span className="text-sakaland-accent font-numeric">
                   +{formatSakalekas(g.reward)}
                 </span>
               </div>
@@ -133,7 +133,7 @@ export function GoalsManager({
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="!p-2 hover:!text-sakaland-red"
+                    className="!p-2 hover:!text-red-400"
                     title="Excluir"
                     disabled={isPending}
                     onClick={() => handleDelete(g.id, g.title)}
@@ -165,7 +165,7 @@ export function GoalsManager({
               name="description"
               required
               rows={3}
-              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red resize-none"
+              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary resize-none"
             />
           </div>
           <Input id="reward" name="reward" type="number" min={0} label="Sakalekas ao concluir" required />
@@ -200,7 +200,7 @@ export function GoalsManager({
                 defaultValue={editGoal.description}
                 required
                 rows={3}
-                className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red resize-none"
+                className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary resize-none"
               />
             </div>
             <Input
@@ -267,7 +267,7 @@ export function GoalsManager({
             <select
               name="userId"
               required
-              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red"
+              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary"
             >
               <option value="">Selecione um participante</option>
               {participants.map((p) => (

@@ -31,7 +31,7 @@ export function StoreGrid({
               className={cn(
                 "px-3.5 py-1.5 rounded-full text-xs font-medium border transition-colors",
                 active === cat
-                  ? "bg-sakaland-red border-sakaland-red text-white"
+                  ? "bg-sakaland-primary border-sakaland-primary text-white"
                   : "bg-sakaland-surface border-white/10 text-sakaland-muted hover:text-sakaland-white hover:border-white/20"
               )}
             >

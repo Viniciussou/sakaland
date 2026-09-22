@@ -1,6 +1,6 @@
 # 🏮 Sakaland — Sistema Gamificado para Evento Corporativo
 
-Sistema web completo para o evento corporativo **Sakaland**, da empresa Sakamoto. Participantes cumprem metas, acumulam a moeda oficial do evento — **Sakalekas** — e trocam por brindes em uma loja gamificada, com ranking, painel administrativo completo e notificações automáticas.
+Sistema web completo para o evento corporativo **Sakaland**, da **Lubrax**. Participantes cumprem metas, acumulam a moeda oficial do evento — **Sakalekas** — e trocam por brindes em uma loja gamificada, com ranking, painel administrativo completo e notificações automáticas.
 
 ![Stack](https://img.shields.io/badge/Next.js-14-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-green) ![Tailwind](https://img.shields.io/badge/TailwindCSS-3-38bdf8)
 
@@ -41,7 +41,7 @@ Sempre que um participante resgata um brinde, o sistema:
 | Camada          | Tecnologia                                  |
 |-----------------|----------------------------------------------|
 | Front-end       | Next.js 14 (App Router) + TypeScript          |
-| Estilo          | Tailwind CSS (tema customizado Sakamoto)      |
+| Estilo          | Tailwind CSS (tema customizado Lubrax)      |
 | Banco de dados  | MongoDB + Mongoose                            |
 | Autenticação    | JWT (cookies httpOnly) + bcrypt               |
 | Server Actions  | Usadas na maior parte das mutações            |
@@ -146,7 +146,7 @@ Acesse [http://localhost:3000](http://localhost:3000).
 
 ## 🎨 Identidade visual
 
-Paleta inspirada na marca Sakamoto: preto profundo (`#0B0B0D`), vermelho de destaque (`#C8102E`) e branco quente (`#F5F5F0`), com acentos dourado/prata/bronze para o sistema de medalhas do ranking. Tipografia combina **Playfair Display** (títulos, elegância editorial) com **Inter** (corpo de texto, legibilidade). Suporte a tema claro/escuro via `next-themes`.
+Paleta extraída da logo oficial da Lubrax: verde de marca (`#0E8A3E`, com o verde profundo `#004415` do logotipo como tom de destaque/hover) e preto sobre uma base quase-preta (`#080D0B`), com azul (`#2F80ED`) reservado para detalhes — saldo, preços, medalha de 1º lugar. Cores de perigo/exclusão usam vermelho semântico dedicado, independente da marca. Tipografia combina **Archivo** (títulos, geométrica e forte) com **IBM Plex Sans** (corpo de texto) e **IBM Plex Mono** para todo valor numérico. O logotipo é renderizado sobre uma placa clara para garantir contraste. O sistema opera somente em modo noturno — não há alternância de tema.
 
 ---
 
@@ -163,4 +163,4 @@ Este projeto entrega um sistema **funcional e completo** conforme o escopo solic
 
 ## 📄 Licença
 
-Projeto desenvolvido sob demanda para o evento corporativo Sakaland (Sakamoto). Uso interno.
+Projeto desenvolvido sob demanda para o evento corporativo Sakaland (Lubrax). Uso interno.

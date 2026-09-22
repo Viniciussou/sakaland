@@ -46,7 +46,7 @@ export function SettingsForm({ settings }: { settings: any }) {
                 type="checkbox"
                 name={f.key}
                 defaultChecked={settings.features?.[f.key]}
-                className="accent-sakaland-red"
+                className="accent-sakaland-primary"
               />
               {f.label}
             </label>
@@ -65,7 +65,7 @@ export function SettingsForm({ settings }: { settings: any }) {
               name="welcomeMessage"
               defaultValue={settings.automatedMessages?.welcomeMessage}
               rows={2}
-              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red resize-none"
+              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary resize-none"
             />
           </div>
           <div className="space-y-1.5">
@@ -76,7 +76,7 @@ export function SettingsForm({ settings }: { settings: any }) {
               name="purchaseConfirmation"
               defaultValue={settings.automatedMessages?.purchaseConfirmation}
               rows={2}
-              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red resize-none"
+              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary resize-none"
             />
           </div>
           <div className="space-y-1.5">
@@ -87,7 +87,7 @@ export function SettingsForm({ settings }: { settings: any }) {
               name="goalCompleted"
               defaultValue={settings.automatedMessages?.goalCompleted}
               rows={2}
-              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red resize-none"
+              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary resize-none"
             />
           </div>
         </div>

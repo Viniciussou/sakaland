@@ -61,7 +61,7 @@ export function Pagination({
               className={cn(
                 "w-8 h-8 flex items-center justify-center rounded-lg text-xs font-numeric transition-colors",
                 p === page
-                  ? "bg-sakaland-red text-white"
+                  ? "bg-sakaland-primary text-white"
                   : "text-sakaland-muted hover:text-sakaland-white hover:bg-white/5 border border-transparent"
               )}
             >

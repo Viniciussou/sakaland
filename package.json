@@ -25,7 +25,6 @@
     "clsx": "2.1.1",
     "tailwind-merge": "2.5.2",
     "sonner": "1.5.0",
-    "next-themes": "0.3.0",
     "exceljs": "4.4.0",
     "pdfkit": "0.15.0",
     "iconv-lite": "0.6.3",

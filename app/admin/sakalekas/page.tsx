@@ -74,13 +74,13 @@ export default async function AdminSakalekasPage({
                       <td
                         className={cn(
                           "p-3 font-numeric",
-                          t.type === "credit" ? "text-emerald-400" : "text-sakaland-red"
+                          t.type === "credit" ? "text-emerald-400" : "text-red-400"
                         )}
                       >
                         {t.type === "credit" ? "+" : "-"}
                         {formatSakalekas(t.amount)}
                       </td>
-                      <td className="p-3 text-sakaland-gold font-numeric">{formatSakalekas(t.balanceAfter)}</td>
+                      <td className="p-3 text-sakaland-accent font-numeric">{formatSakalekas(t.balanceAfter)}</td>
                       <td className="p-3 text-sakaland-muted text-xs">
                         {formatDateTime(t.createdAt)}
                       </td>

@@ -25,14 +25,14 @@ export default async function ParticipantDashboardPage() {
           value={`${formatSakalekas(data.balance)}`}
           hint="Sakalekas disponíveis"
           icon={Coins}
-          accent="gold"
+          accent="accent"
         />
         <StatCard
           label="Sua posição"
           value={`#${data.rankPosition}`}
           hint="no ranking geral"
           icon={Trophy}
-          accent="red"
+          accent="primary"
         />
         <StatCard
           label="Metas concluídas"
@@ -47,7 +47,7 @@ export default async function ParticipantDashboardPage() {
         <Card className="lg:col-span-2">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-display text-lg flex items-center gap-2">
-              <Target className="w-4 h-4 text-sakaland-red" /> Metas disponíveis
+              <Target className="w-4 h-4 text-sakaland-primary" /> Metas disponíveis
             </h2>
           </div>
 
@@ -74,7 +74,7 @@ export default async function ParticipantDashboardPage() {
                     </p>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="flex items-center gap-1 text-sakaland-gold font-semibold">
+                    <div className="flex items-center gap-1 text-sakaland-accent font-semibold">
                       <Coins className="w-3.5 h-3.5" /> +{formatSakalekas(goal.reward)}
                     </div>
                     {goal.completedByMe && (
@@ -95,7 +95,7 @@ export default async function ParticipantDashboardPage() {
 
         <Card>
           <h2 className="font-display text-lg flex items-center gap-2 mb-4">
-            <History className="w-4 h-4 text-sakaland-red" /> Últimas movimentações
+            <History className="w-4 h-4 text-sakaland-primary" /> Últimas movimentações
           </h2>
           {data.recentTransactions.length === 0 ? (
             <p className="text-sm text-sakaland-muted">
@@ -112,7 +112,7 @@ export default async function ParticipantDashboardPage() {
                   <span
                     className={cn(
                       "font-semibold",
-                      t.type === "credit" ? "text-emerald-400" : "text-sakaland-red"
+                      t.type === "credit" ? "text-emerald-400" : "text-red-400"
                     )}
                   >
                     {t.type === "credit" ? "+" : "-"}
@@ -124,7 +124,7 @@ export default async function ParticipantDashboardPage() {
           )}
           <Link
             href="/profile"
-            className="block mt-4 text-xs text-sakaland-red hover:underline"
+            className="block mt-4 text-xs text-sakaland-primary hover:underline"
           >
             Ver histórico completo →
           </Link>

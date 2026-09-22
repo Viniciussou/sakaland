@@ -79,7 +79,7 @@ export function RewardsManager({ rewards }: { rewards: RewardListItem[] }) {
                 <h3 className="font-display text-lg mb-1">{r.name}</h3>
                 <p className="text-xs text-sakaland-muted mb-3 line-clamp-2">{r.description}</p>
                 <div className="flex items-center justify-between text-sm mb-3">
-                  <span className="text-sakaland-gold font-numeric">
+                  <span className="text-sakaland-accent font-numeric">
                     {formatSakalekas(r.price)} Sakalekas
                   </span>
                   <span className="text-sakaland-muted font-numeric">{r.stock} em estoque</span>
@@ -96,7 +96,7 @@ export function RewardsManager({ rewards }: { rewards: RewardListItem[] }) {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="hover:!text-sakaland-red"
+                    className="hover:!text-red-400"
                     disabled={isPending}
                     onClick={() => handleDelete(r.id, r.name)}
                   >
@@ -161,7 +161,7 @@ function RewardForm({
           defaultValue={reward?.description}
           required
           rows={3}
-          className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red resize-none"
+          className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary resize-none"
         />
       </div>
       <Input
@@ -206,7 +206,7 @@ function RewardForm({
             type="checkbox"
             name="featured"
             defaultChecked={reward?.featured}
-            className="accent-sakaland-red"
+            className="accent-sakaland-primary"
           />
           Destaque
         </label>
@@ -216,7 +216,7 @@ function RewardForm({
               type="checkbox"
               name="isActive"
               defaultChecked={reward.isActive}
-              className="accent-sakaland-red"
+              className="accent-sakaland-primary"
             />
             Ativo na loja
           </label>

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 const medalStyles: Record<string, string> = {
-  gold: "bg-sakaland-gold/15 text-sakaland-gold border-sakaland-gold/50 shadow-[0_0_0_3px_rgba(182,137,63,0.12)]",
+  gold: "bg-sakaland-accent/15 text-sakaland-accent border-sakaland-accent/50 shadow-[0_0_0_3px_rgba(47,128,237,0.14)]",
   silver: "bg-sakaland-silver/15 text-sakaland-silver border-sakaland-silver/50 shadow-[0_0_0_3px_rgba(182,172,152,0.10)]",
   bronze: "bg-sakaland-bronze/15 text-sakaland-bronze border-sakaland-bronze/50 shadow-[0_0_0_3px_rgba(147,103,63,0.10)]",
 };

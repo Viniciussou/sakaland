@@ -96,7 +96,7 @@ export function UsersTable({
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Pesquisar por nome ou e-mail..."
-            className="w-full rounded-lg bg-sakaland-surface border border-white/10 pl-9 pr-3 py-2.5 text-sm outline-none focus:border-sakaland-red transition-colors"
+            className="w-full rounded-lg bg-sakaland-surface border border-white/10 pl-9 pr-3 py-2.5 text-sm outline-none focus:border-sakaland-primary transition-colors"
           />
         </div>
         <div className="flex items-center gap-3">
@@ -140,7 +140,7 @@ export function UsersTable({
                         {u.role === "admin" ? "Administrador" : "Participante"}
                       </Badge>
                     </td>
-                    <td className="p-4 text-sakaland-gold font-numeric">
+                    <td className="p-4 text-sakaland-accent font-numeric">
                       {formatSakalekas(u.balance)}
                     </td>
                     <td className="p-4">
@@ -169,7 +169,7 @@ export function UsersTable({
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="!p-2 hover:!text-sakaland-red"
+                          className="!p-2 hover:!text-red-400"
                           title="Excluir"
                           disabled={isPending}
                           onClick={() => handleDelete(u)}
@@ -193,7 +193,7 @@ export function UsersTable({
                     <p className="font-medium">{u.name}</p>
                     <p className="text-xs text-sakaland-muted">{u.email}</p>
                   </div>
-                  <span className="text-sakaland-gold font-numeric text-sm shrink-0">
+                  <span className="text-sakaland-accent font-numeric text-sm shrink-0">
                     {formatSakalekas(u.balance)}
                   </span>
                 </div>
@@ -215,7 +215,7 @@ export function UsersTable({
                   <Button variant="ghost" size="sm" className="!p-2" onClick={() => handleToggleBlock(u.id)}>
                     {u.isBlocked ? <Unlock className="w-3.5 h-3.5" /> : <Lock className="w-3.5 h-3.5" />}
                   </Button>
-                  <Button variant="ghost" size="sm" className="!p-2 hover:!text-sakaland-red" onClick={() => handleDelete(u)}>
+                  <Button variant="ghost" size="sm" className="!p-2 hover:!text-red-400" onClick={() => handleDelete(u)}>
                     <Trash2 className="w-3.5 h-3.5" />
                   </Button>
                 </div>
@@ -252,7 +252,7 @@ export function UsersTable({
             <label className="text-xs uppercase tracking-wider text-sakaland-muted">Papel</label>
             <select
               name="role"
-              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red"
+              className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary"
             >
               <option value="participant">Participante</option>
               <option value="admin">Administrador</option>
@@ -284,7 +284,7 @@ export function UsersTable({
               <select
                 name="role"
                 defaultValue={editUser.role}
-                className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-red"
+                className="w-full rounded-lg bg-sakaland-surface border border-white/10 px-4 py-2.5 text-sm outline-none focus:border-sakaland-primary"
               >
                 <option value="participant">Participante</option>
                 <option value="admin">Administrador</option>

@@ -9,32 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Paleta "Hanko": tinta de selo (vermelhão), papel e tinta sumi,
-        // inspirada nos carimbos oficiais japoneses e em livros-razão.
+        // Paleta Lubrax: verde da marca como cor dominante sobre fundo
+        // quase-preto, com azul reservado para detalhes/acentos.
         sakaland: {
-          black: "#161009",     // sumi — tinta profunda, base do fundo
-          surface: "#211810",    // superfície de cartões
-          surface2: "#2B2013",  // superfície secundária (hover, inputs)
-          red: "#B8362A",         // shu — vermelhão do carimbo (cor primária)
-          redDark: "#7C2119",    // tinta do carimbo em estado pressionado
-          white: "#F1E7D3",        // washi — papel claro
-          gold: "#B6893F",          // kin — ouro envelhecido (moeda/1º lugar)
-          silver: "#B6AC98",          // prata envelhecida (2º lugar)
-          bronze: "#93673F",          // bronze (3º lugar)
-          muted: "#A0937C",             // texto secundário sobre papel
-          indigo: "#3C5670",              // ai — azil-anil, acento secundário de dados
+          black: "#080D0B",        // fundo — preto com leve tom esverdeado
+          surface: "#0E1815",       // superfície de cartões
+          surface2: "#152621",      // superfície secundária (hover, inputs)
+          primary: "#0E8A3E",         // verde principal (ações, links, marca)
+          primaryDark: "#004415",       // verde profundo do logo (hover, pressed)
+          white: "#F0F4F2",                // texto claro
+          accent: "#2F80ED",                 // azul de detalhe (destaques, moeda, 1º lugar)
+          accentDark: "#1B5FC4",               // azul mais escuro (hover em elementos de acento)
+          silver: "#B9C2BC",                   // prata (2º lugar)
+          bronze: "#9C7A4A",                     // bronze (3º lugar)
+          muted: "#7E938A",                        // texto secundário
+          indigo: "#173B66",                         // azul profundo — série secundária de gráficos
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "serif"],
+        display: ["var(--font-display)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       backgroundImage: {
         "sakaland-glow":
-          "radial-gradient(60% 60% at 50% 0%, rgba(184,54,42,0.16) 0%, rgba(22,16,9,0) 70%)",
-        "seal-ring":
-          "conic-gradient(from 90deg, #B8362A, #7C2119, #B8362A)",
+          "radial-gradient(60% 60% at 50% 0%, rgba(14,138,62,0.20) 0%, rgba(8,20,16,0) 70%)",
       },
       animation: {
         "coin-flip": "coinFlip 0.9s cubic-bezier(.4,0,.2,1)",

@@ -22,7 +22,7 @@ export default async function AdminReportsPage() {
           label="Sakalekas distribuídas"
           value={formatSakalekas(stats.totalSakalekasDistributed)}
           icon={Coins}
-          accent="gold"
+          accent="accent"
         />
         <StatCard label="Brindes entregues" value={stats.totalRewardsDelivered} icon={Gift} />
         <StatCard label="Metas concluídas" value={stats.completedGoals} icon={Target} />
@@ -47,16 +47,16 @@ export default async function AdminReportsPage() {
 
         <a
           href="/api/reports/export/pdf"
-          className="group block rounded-xl2 bg-sakaland-surface border border-white/10 p-5 hover:border-sakaland-red/40 transition-colors"
+          className="group block rounded-xl2 bg-sakaland-surface border border-white/10 p-5 hover:border-sakaland-primary/40 transition-colors"
         >
-          <div className="w-10 h-10 rounded-lg bg-sakaland-red/15 border border-sakaland-red/25 flex items-center justify-center mb-4">
-            <FileText className="w-5 h-5 text-sakaland-red" />
+          <div className="w-10 h-10 rounded-lg bg-sakaland-primary/15 border border-sakaland-primary/25 flex items-center justify-center mb-4">
+            <FileText className="w-5 h-5 text-sakaland-primary" />
           </div>
           <h3 className="font-display text-lg mb-1">Resumo executivo</h3>
           <p className="text-xs text-sakaland-muted mb-4">
             Um documento enxuto com os principais números e o top 10 do ranking.
           </p>
-          <span className="inline-flex items-center gap-1 text-xs text-sakaland-red font-medium">
+          <span className="inline-flex items-center gap-1 text-xs text-sakaland-primary font-medium">
             Baixar PDF <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
           </span>
         </a>

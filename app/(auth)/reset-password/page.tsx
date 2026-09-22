@@ -38,7 +38,7 @@ function ResetPasswordForm() {
         <p className="text-sakaland-muted text-sm mb-6">
           O link de redefinição de senha está ausente ou expirado.
         </p>
-        <Link href="/forgot-password" className="text-sakaland-red hover:underline text-sm">
+        <Link href="/forgot-password" className="text-sakaland-primary hover:underline text-sm">
           Solicitar novo link
         </Link>
       </div>

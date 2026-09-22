@@ -1,6 +1,6 @@
 "use client";
 
-import { HankoMark } from "@/components/brand/hanko-mark";
+import { Logo } from "@/components/brand/logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -42,17 +42,12 @@ export function Sidebar({ role }: { role: "admin" | "participant" }) {
 
   return (
     <aside className="hidden lg:flex flex-col w-64 shrink-0 border-r border-white/5 bg-sakaland-black relative h-screen sticky top-0 py-7">
-      <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-sakaland-red via-sakaland-red/40 to-transparent" />
+      <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-sakaland-primary via-sakaland-primary/40 to-transparent" />
 
       <div className="px-6 flex items-center gap-3 mb-9">
-        <HankoMark size={38} />
-        <div>
-          <div className="font-display text-lg leading-none tracking-wide">
-            Sakaland
-          </div>
-          <div className="text-[10px] uppercase tracking-[0.2em] text-sakaland-muted mt-1">
-            {role === "admin" ? "Painel administrativo" : "Área do participante"}
-          </div>
+        <Logo height={26} />
+        <div className="text-[10px] uppercase tracking-[0.2em] text-sakaland-muted leading-tight">
+          {role === "admin" ? "Painel administrativo" : "Área do participante"}
         </div>
       </div>
 
@@ -68,14 +63,14 @@ export function Sidebar({ role }: { role: "admin" | "participant" }) {
               className={cn(
                 "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors group",
                 active
-                  ? "bg-sakaland-red/12 text-sakaland-white border border-sakaland-red/25"
+                  ? "bg-sakaland-primary/12 text-sakaland-white border border-sakaland-primary/25"
                   : "text-sakaland-muted hover:text-sakaland-white hover:bg-white/5"
               )}
             >
               <Icon
                 className={cn(
                   "w-4 h-4",
-                  active ? "text-sakaland-red" : "text-sakaland-muted group-hover:text-sakaland-white"
+                  active ? "text-sakaland-primary" : "text-sakaland-muted group-hover:text-sakaland-white"
                 )}
               />
               {link.label}
@@ -85,8 +80,8 @@ export function Sidebar({ role }: { role: "admin" | "participant" }) {
       </nav>
 
       <div className="mx-6 pt-5 mt-2 border-t border-white/5 text-[11px] text-sakaland-muted flex items-center gap-2">
-        <span className="w-1.5 h-1.5 rounded-full bg-sakaland-red" />
-        Evento Sakamoto · {new Date().getFullYear()}
+        <span className="w-1.5 h-1.5 rounded-full bg-sakaland-primary" />
+        Sakamoto · {new Date().getFullYear()}
       </div>
     </aside>
   );

@@ -44,7 +44,7 @@ export function MobileNav({ role }: { role: "admin" | "participant" }) {
             href={link.href}
             className={cn(
               "flex flex-col items-center gap-1 px-2 py-1 text-[10px]",
-              active ? "text-sakaland-red" : "text-sakaland-muted"
+              active ? "text-sakaland-primary" : "text-sakaland-muted"
             )}
           >
             <Icon className="w-5 h-5" />

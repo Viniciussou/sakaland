@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-display: 'Shippori Mincho', serif;
+  --font-display: 'Archivo', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 }
@@ -12,157 +12,85 @@ html {
   scroll-behavior: smooth;
 }
 
+/* O sistema opera somente em modo noturno — sem alternância de tema. */
 body {
   @apply bg-sakaland-black text-sakaland-white font-body antialiased;
-  transition: background-color 0.2s ease, color 0.2s ease;
-
   background-image:
-    radial-gradient(1200px 500px at 15% -10%, rgba(22, 163, 74, 0.15), transparent 60%),
-    radial-gradient(800px 400px at 85% 10%, rgba(234, 179, 8, 0.10), transparent 60%),
+    radial-gradient(1200px 500px at 15% -10%, rgba(14, 138, 62, 0.14), transparent 60%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-
   background-attachment: fixed;
 }
 
-.dark body {
-  @apply bg-sakaland-black text-sakaland-white;
-}
-
-
-/* Tema claro */
-:root:not(.dark) body {
-  background-color: #F0FDF4;
-  color: #052E16;
-
-  background-image:
-    radial-gradient(1200px 500px at 15% -10%, rgba(22,163,74,0.10), transparent 60%);
-}
-
-
-:root:not(.dark) .bg-sakaland-black {
-  background-color: #F0FDF4 !important;
-}
-
-:root:not(.dark) .bg-sakaland-surface {
-  background-color: #FFFFFF !important;
-  border-color: rgba(5,46,22,0.10) !important;
-}
-
-:root:not(.dark) .bg-sakaland-surface2 {
-  background-color: #DCFCE7 !important;
-}
-
-:root:not(.dark) .text-sakaland-white {
-  color: #052E16 !important;
-}
-
-:root:not(.dark) .text-sakaland-muted {
-  color: #4B5563 !important;
-}
-
-
-:root:not(.dark) .border-white\/10 {
-  border-color: rgba(5,46,22,0.10) !important;
-}
-
-:root:not(.dark) .border-white\/5 {
-  border-color: rgba(5,46,22,0.07) !important;
-}
-
-:root:not(.dark) .glass-card {
-  background: rgba(255,255,255,0.88);
-}
-
-
 ::selection {
-  background: #EAB308;
-  color: #052E16;
+  background: #0E8A3E;
+  color: #F0F4F2;
 }
-
 
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #052E16;
+  background: #0E1815;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #166534;
+  background: #1E3A5F;
   border-radius: 8px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #EAB308;
+  background: #2F80ED;
 }
-
 
 .skeleton {
   background: linear-gradient(
     90deg,
-    #052E16 0%,
-    #166534 50%,
-    #052E16 100%
+    #152621 0%,
+    #1B3D28 50%,
+    #152621 100%
   );
-
   background-size: 1400px 100%;
   animation: shimmer 1.8s linear infinite;
 }
 
-
 .glass-card {
-  background: rgba(5, 46, 22, 0.72);
+  background: rgba(14, 33, 25, 0.72);
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(254, 240, 138, 0.12);
+  border: 1px solid rgba(240, 244, 242, 0.07);
 }
-
 
 .card-glow {
-  box-shadow:
-    0 0 0 1px rgba(234,179,8,0.20),
-    0 24px 60px -24px rgba(22,163,74,0.40);
+  box-shadow: 0 0 0 1px rgba(14, 138, 62, 0.16), 0 24px 60px -24px rgba(14, 138, 62, 0.30);
 }
 
-
-/* Selo */
+/* Marca d'água de canto — remete a um selo/carimbo em documento oficial */
 .stamp-corner {
   position: relative;
   overflow: hidden;
 }
-
 .stamp-corner::after {
   content: "";
   position: absolute;
-
   top: -34px;
   right: -34px;
-
-  width:68px;
-  height:68px;
-
-  border-radius:9999px;
-
-  border:1.5px solid rgba(234,179,8,0.45);
-
-  pointer-events:none;
+  width: 68px;
+  height: 68px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(14, 138, 62, 0.35);
+  pointer-events: none;
 }
-
 
 .font-numeric {
   font-family: var(--font-mono);
   font-feature-settings: "tnum" 1, "zero" 1;
-  letter-spacing:-0.01em;
+  letter-spacing: -0.01em;
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration:0.01ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:0.01ms !important;
-    scroll-behavior:auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

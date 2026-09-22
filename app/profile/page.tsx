@@ -79,7 +79,7 @@ export default async function ProfilePage() {
                 <span
                   className={cn(
                     "font-numeric",
-                    t.type === "credit" ? "text-emerald-400" : "text-sakaland-red"
+                    t.type === "credit" ? "text-emerald-400" : "text-red-400"
                   )}
                 >
                   {t.type === "credit" ? "+" : "-"}
@@ -108,7 +108,7 @@ export default async function ProfilePage() {
                     <p className="text-xs text-sakaland-muted">{formatDateTime(p.createdAt)}</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="text-sakaland-gold font-numeric">
+                    <span className="text-sakaland-accent font-numeric">
                       {formatSakalekas(p.price)}
                     </span>
                     <Badge variant={statusLabel[p.status].variant}>

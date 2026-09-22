@@ -71,7 +71,7 @@ export default function RegisterPage() {
 
       <p className="mt-8 text-sm text-sakaland-muted text-center">
         Já tem uma conta?{" "}
-        <Link href="/login" className="text-sakaland-red hover:underline">
+        <Link href="/login" className="text-sakaland-primary hover:underline">
           Entrar
         </Link>
       </p>

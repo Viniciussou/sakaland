@@ -53,7 +53,7 @@ export default function LoginPage() {
         <div className="flex justify-end -mt-2">
           <Link
             href="/forgot-password"
-            className="text-xs text-sakaland-muted hover:text-sakaland-red transition-colors"
+            className="text-xs text-sakaland-muted hover:text-sakaland-primary transition-colors"
           >
             Esqueceu a senha?
           </Link>
@@ -66,7 +66,7 @@ export default function LoginPage() {
 
       <p className="mt-8 text-sm text-sakaland-muted text-center">
         Não tem uma conta?{" "}
-        <Link href="/register" className="text-sakaland-red hover:underline">
+        <Link href="/register" className="text-sakaland-primary hover:underline">
           Cadastre-se
         </Link>
       </p>

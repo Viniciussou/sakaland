@@ -39,13 +39,13 @@ export function ConfirmDialog({
           <div
             className={
               state.danger
-                ? "w-9 h-9 rounded-full bg-sakaland-red/15 border border-sakaland-red/30 flex items-center justify-center shrink-0"
-                : "w-9 h-9 rounded-full bg-sakaland-gold/15 border border-sakaland-gold/30 flex items-center justify-center shrink-0"
+                ? "w-9 h-9 rounded-full bg-red-500/15 border border-red-500/30 flex items-center justify-center shrink-0"
+                : "w-9 h-9 rounded-full bg-sakaland-accent/15 border border-sakaland-accent/30 flex items-center justify-center shrink-0"
             }
           >
             <AlertTriangle
               className={
-                state.danger ? "w-4 h-4 text-sakaland-red" : "w-4 h-4 text-sakaland-gold"
+                state.danger ? "w-4 h-4 text-red-400" : "w-4 h-4 text-sakaland-accent"
               }
             />
           </div>

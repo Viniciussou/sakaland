@@ -71,7 +71,7 @@ export function PurchasesTable({
                   <tr key={p.id} className="border-b border-white/5 last:border-0 hover:bg-white/[0.02] transition-colors">
                     <td className="p-3 pl-5">{p.userName}</td>
                     <td className="p-3">{p.rewardName}</td>
-                    <td className="p-3 text-sakaland-gold font-numeric">{formatSakalekas(p.price)}</td>
+                    <td className="p-3 text-sakaland-accent font-numeric">{formatSakalekas(p.price)}</td>
                     <td className="p-3">
                       <Badge variant={statusMeta[p.status].variant}>{statusMeta[p.status].label}</Badge>
                     </td>
@@ -81,7 +81,7 @@ export function PurchasesTable({
                         disabled={isPending}
                         value={p.status}
                         onChange={(e) => updateStatus(p.id, e.target.value as any)}
-                        className="rounded-lg bg-sakaland-surface border border-white/10 px-2 py-1.5 text-xs outline-none focus:border-sakaland-red"
+                        className="rounded-lg bg-sakaland-surface border border-white/10 px-2 py-1.5 text-xs outline-none focus:border-sakaland-primary"
                       >
                         <option value="pending">Pendente</option>
                         <option value="delivered">Entregue</option>

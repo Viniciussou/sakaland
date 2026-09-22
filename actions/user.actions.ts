@@ -5,7 +5,11 @@ import connectToDatabase from "@/lib/mongodb";
 import { User, Transaction } from "@/models";
 import { requireAdmin, requireSession, hashPassword } from "@/lib/auth";
 import { recordLog } from "@/lib/audit";
-import { updateProfileSchema } from "@/lib/validation";
+import {
+  updateProfileSchema,
+  AVATAR_MAX_SIZE_BYTES,
+  AVATAR_ALLOWED_TYPES,
+} from "@/lib/validation";
 import type { ActionState } from "./auth.actions";
 
 export interface UserListItem {
@@ -271,7 +275,6 @@ export async function updateProfileAction(
   const parsed = updateProfileSchema.safeParse({
     name: formData.get("name") || undefined,
     department: formData.get("department") || undefined,
-    avatarUrl: formData.get("avatarUrl") || undefined,
   });
 
   if (!parsed.success) {
@@ -283,7 +286,29 @@ export async function updateProfileAction(
 
   if (parsed.data.name) user.name = parsed.data.name;
   if (parsed.data.department !== undefined) user.department = parsed.data.department;
-  if (parsed.data.avatarUrl) user.avatarUrl = parsed.data.avatarUrl;
+
+  // Foto de perfil: o arquivo enviado pelo usuário (do computador dele) é
+  // convertido para base64 e salvo direto no documento do usuário no MongoDB.
+  const removeAvatar = formData.get("removeAvatar") === "1";
+  const avatarFile = formData.get("avatarFile");
+
+  if (removeAvatar) {
+    user.avatarUrl = undefined;
+  } else if (avatarFile instanceof File && avatarFile.size > 0) {
+    if (!AVATAR_ALLOWED_TYPES.includes(avatarFile.type)) {
+      return {
+        success: false,
+        message: "Formato de imagem inválido. Use JPG, PNG, WEBP ou GIF.",
+      };
+    }
+    if (avatarFile.size > AVATAR_MAX_SIZE_BYTES) {
+      return { success: false, message: "A imagem deve ter no máximo 2MB." };
+    }
+
+    const buffer = Buffer.from(await avatarFile.arrayBuffer());
+    const base64 = buffer.toString("base64");
+    user.avatarUrl = `data:${avatarFile.type};base64,${base64}`;
+  }
 
   await user.save();
 
